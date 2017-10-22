@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  xmr-stak-cpu-ios
+//
+//  Created by Michael G. Kazakov on 10/22/17.
+//  Copyright © 2017 Michael G. Kazakov. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#include "sse2neon.h"
+
+#define CONF_NO_HWLOC 1
+#define CONF_NO_HTTPD 1
+
+#endif /* PrefixHeader_pch */

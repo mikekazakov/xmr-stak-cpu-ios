@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4432C3030D35931B760C51BE /* Pods_xmr_stak_cpu_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6311B0DB478EA84A21FACD /* Pods_xmr_stak_cpu_ios.framework */; };
+		CF03E7C01F9C355000D3BF3F /* c_jh.c in Sources */ = {isa = PBXBuildFile; fileRef = CF03E7B01F9C354F00D3BF3F /* c_jh.c */; };
+		CF03E7C11F9C355000D3BF3F /* c_keccak.c in Sources */ = {isa = PBXBuildFile; fileRef = CF03E7B21F9C354F00D3BF3F /* c_keccak.c */; };
+		CF03E7C21F9C355000D3BF3F /* cryptonight_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF03E7B41F9C355000D3BF3F /* cryptonight_common.cpp */; };
+		CF03E7C31F9C355000D3BF3F /* c_blake256.c in Sources */ = {isa = PBXBuildFile; fileRef = CF03E7B61F9C355000D3BF3F /* c_blake256.c */; };
+		CF03E7C41F9C355000D3BF3F /* soft_aes.c in Sources */ = {isa = PBXBuildFile; fileRef = CF03E7B91F9C355000D3BF3F /* soft_aes.c */; };
+		CF03E7C51F9C355000D3BF3F /* c_groestl.c in Sources */ = {isa = PBXBuildFile; fileRef = CF03E7BC1F9C355000D3BF3F /* c_groestl.c */; };
+		CF03E7C61F9C355000D3BF3F /* c_skein.c in Sources */ = {isa = PBXBuildFile; fileRef = CF03E7BD1F9C355000D3BF3F /* c_skein.c */; };
+		CF03E7C91F9C55E700D3BF3F /* ios-cli-miner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF03E7C81F9C55E600D3BF3F /* ios-cli-miner.cpp */; };
+		CF03E7CB1F9C565E00D3BF3F /* config.txt in Resources */ = {isa = PBXBuildFile; fileRef = CF03E7CA1F9C565E00D3BF3F /* config.txt */; };
+		CFA4C1D01F9C19310081AA84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA4C1CF1F9C19310081AA84 /* AppDelegate.swift */; };
+		CFA4C1D21F9C19310081AA84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA4C1D11F9C19310081AA84 /* ViewController.swift */; };
+		CFA4C1D51F9C19310081AA84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA4C1D31F9C19310081AA84 /* Main.storyboard */; };
+		CFA4C1D71F9C19310081AA84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA4C1D61F9C19310081AA84 /* Assets.xcassets */; };
+		CFA4C1DA1F9C19310081AA84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA4C1D81F9C19310081AA84 /* LaunchScreen.storyboard */; };
+		CFA4C21D1F9C34D50081AA84 /* webdesign.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFA4C2031F9C34D30081AA84 /* webdesign.cpp */; };
+		CFA4C21E1F9C34D50081AA84 /* minethd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFA4C2051F9C34D40081AA84 /* minethd.cpp */; };
+		CFA4C21F1F9C34D50081AA84 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CFA4C2061F9C34D40081AA84 /* LICENSE */; };
+		CFA4C2201F9C34D50081AA84 /* console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFA4C2071F9C34D40081AA84 /* console.cpp */; };
+		CFA4C2211F9C34D50081AA84 /* executor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFA4C2091F9C34D40081AA84 /* executor.cpp */; };
+		CFA4C2221F9C34D50081AA84 /* jconf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFA4C20C1F9C34D40081AA84 /* jconf.cpp */; };
+		CFA4C2231F9C34D50081AA84 /* jpsock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFA4C20F1F9C34D40081AA84 /* jpsock.cpp */; };
+		CFA4C2241F9C34D50081AA84 /* httpd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFA4C2121F9C34D40081AA84 /* httpd.cpp */; };
+		CFA4C2261F9C34D50081AA84 /* socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFA4C21A1F9C34D50081AA84 /* socket.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0B5B2DA7FA2A0B7D3B3FF85B /* Pods-xmr-stak-cpu-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xmr-stak-cpu-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-xmr-stak-cpu-ios/Pods-xmr-stak-cpu-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		211FBACC8D1662FC69229749 /* Pods-xmr-stak-cpu-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xmr-stak-cpu-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-xmr-stak-cpu-ios/Pods-xmr-stak-cpu-ios.release.xcconfig"; sourceTree = "<group>"; };
+		AB6311B0DB478EA84A21FACD /* Pods_xmr_stak_cpu_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xmr_stak_cpu_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF03E7AE1F9C354F00D3BF3F /* c_jh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_jh.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/crypto/c_jh.h"; sourceTree = "<group>"; };
+		CF03E7AF1F9C354F00D3BF3F /* int-util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "int-util.h"; path = "xmr-stak-cpu-ios/xmr-stak-cpu/crypto/int-util.h"; sourceTree = "<group>"; };
+		CF03E7B01F9C354F00D3BF3F /* c_jh.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = c_jh.c; path = "xmr-stak-cpu-ios/xmr-stak-cpu/crypto/c_jh.c"; sourceTree = "<group>"; };
+		CF03E7B11F9C354F00D3BF3F /* cryptonight_aesni.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cryptonight_aesni.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/crypto/cryptonight_aesni.h"; sourceTree = "<group>"; };
+		CF03E7B21F9C354F00D3BF3F /* c_keccak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = c_keccak.c; path = "xmr-stak-cpu-ios/xmr-stak-cpu/crypto/c_keccak.c"; sourceTree = "<group>"; };
+		CF03E7B31F9C354F00D3BF3F /* c_blake256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_blake256.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/crypto/c_blake256.h"; sourceTree = "<group>"; };
+		CF03E7B41F9C355000D3BF3F /* cryptonight_common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cryptonight_common.cpp; path = "xmr-stak-cpu-ios/xmr-stak-cpu/crypto/cryptonight_common.cpp"; sourceTree = "<group>"; };
+		CF03E7B51F9C355000D3BF3F /* cryptonight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cryptonight.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/crypto/cryptonight.h"; sourceTree = "<group>"; };
+		CF03E7B61F9C355000D3BF3F /* c_blake256.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = c_blake256.c; path = "xmr-stak-cpu-ios/xmr-stak-cpu/crypto/c_blake256.c"; sourceTree = "<group>"; };
+		CF03E7B71F9C355000D3BF3F /* groestl_tables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = groestl_tables.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/crypto/groestl_tables.h"; sourceTree = "<group>"; };
+		CF03E7B81F9C355000D3BF3F /* c_skein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_skein.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/crypto/c_skein.h"; sourceTree = "<group>"; };
+		CF03E7B91F9C355000D3BF3F /* soft_aes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = soft_aes.c; path = "xmr-stak-cpu-ios/xmr-stak-cpu/crypto/soft_aes.c"; sourceTree = "<group>"; };
+		CF03E7BA1F9C355000D3BF3F /* c_keccak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_keccak.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/crypto/c_keccak.h"; sourceTree = "<group>"; };
+		CF03E7BB1F9C355000D3BF3F /* hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hash.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/crypto/hash.h"; sourceTree = "<group>"; };
+		CF03E7BC1F9C355000D3BF3F /* c_groestl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = c_groestl.c; path = "xmr-stak-cpu-ios/xmr-stak-cpu/crypto/c_groestl.c"; sourceTree = "<group>"; };
+		CF03E7BD1F9C355000D3BF3F /* c_skein.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = c_skein.c; path = "xmr-stak-cpu-ios/xmr-stak-cpu/crypto/c_skein.c"; sourceTree = "<group>"; };
+		CF03E7BE1F9C355000D3BF3F /* c_groestl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = c_groestl.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/crypto/c_groestl.h"; sourceTree = "<group>"; };
+		CF03E7BF1F9C355000D3BF3F /* skein_port.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = skein_port.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/crypto/skein_port.h"; sourceTree = "<group>"; };
+		CF03E7C71F9C3D2D00D3BF3F /* cpuid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpuid.h; path = "cpuid-arm/cpuid.h"; sourceTree = "<group>"; };
+		CF03E7C81F9C55E600D3BF3F /* ios-cli-miner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "ios-cli-miner.cpp"; sourceTree = "<group>"; };
+		CF03E7CA1F9C565E00D3BF3F /* config.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.txt; sourceTree = "<group>"; };
+		CF03E7CC1F9C56E900D3BF3F /* xmr-stak-cpu-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "xmr-stak-cpu-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		CFA4C1CC1F9C19310081AA84 /* xmr-stak-cpu-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xmr-stak-cpu-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFA4C1CF1F9C19310081AA84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CFA4C1D11F9C19310081AA84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CFA4C1D41F9C19310081AA84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CFA4C1D61F9C19310081AA84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFA4C1D91F9C19310081AA84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CFA4C1DB1F9C19310081AA84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFA4C1E11F9C1C7C0081AA84 /* sse2neon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sse2neon.h; sourceTree = "<group>"; };
+		CFA4C1FE1F9C1DF80081AA84 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CFA4C2001F9C34D30081AA84 /* cli-miner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "cli-miner.cpp"; path = "xmr-stak-cpu-ios/xmr-stak-cpu/cli-miner.cpp"; sourceTree = "<group>"; };
+		CFA4C2011F9C34D30081AA84 /* donate-level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "donate-level.h"; path = "xmr-stak-cpu-ios/xmr-stak-cpu/donate-level.h"; sourceTree = "<group>"; };
+		CFA4C2021F9C34D30081AA84 /* minethd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = minethd.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/minethd.h"; sourceTree = "<group>"; };
+		CFA4C2031F9C34D30081AA84 /* webdesign.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = webdesign.cpp; path = "xmr-stak-cpu-ios/xmr-stak-cpu/webdesign.cpp"; sourceTree = "<group>"; };
+		CFA4C2041F9C34D40081AA84 /* httpd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = httpd.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/httpd.h"; sourceTree = "<group>"; };
+		CFA4C2051F9C34D40081AA84 /* minethd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = minethd.cpp; path = "xmr-stak-cpu-ios/xmr-stak-cpu/minethd.cpp"; sourceTree = "<group>"; };
+		CFA4C2061F9C34D40081AA84 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = "xmr-stak-cpu-ios/xmr-stak-cpu/LICENSE"; sourceTree = "<group>"; };
+		CFA4C2071F9C34D40081AA84 /* console.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = console.cpp; path = "xmr-stak-cpu-ios/xmr-stak-cpu/console.cpp"; sourceTree = "<group>"; };
+		CFA4C2081F9C34D40081AA84 /* jpsock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jpsock.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/jpsock.h"; sourceTree = "<group>"; };
+		CFA4C2091F9C34D40081AA84 /* executor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = executor.cpp; path = "xmr-stak-cpu-ios/xmr-stak-cpu/executor.cpp"; sourceTree = "<group>"; };
+		CFA4C20A1F9C34D40081AA84 /* executor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = executor.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/executor.h"; sourceTree = "<group>"; };
+		CFA4C20B1F9C34D40081AA84 /* webdesign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = webdesign.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/webdesign.h"; sourceTree = "<group>"; };
+		CFA4C20C1F9C34D40081AA84 /* jconf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = jconf.cpp; path = "xmr-stak-cpu-ios/xmr-stak-cpu/jconf.cpp"; sourceTree = "<group>"; };
+		CFA4C20D1F9C34D40081AA84 /* thdq.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = thdq.hpp; path = "xmr-stak-cpu-ios/xmr-stak-cpu/thdq.hpp"; sourceTree = "<group>"; };
+		CFA4C20E1F9C34D40081AA84 /* autoAdjust.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = autoAdjust.hpp; path = "xmr-stak-cpu-ios/xmr-stak-cpu/autoAdjust.hpp"; sourceTree = "<group>"; };
+		CFA4C20F1F9C34D40081AA84 /* jpsock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = jpsock.cpp; path = "xmr-stak-cpu-ios/xmr-stak-cpu/jpsock.cpp"; sourceTree = "<group>"; };
+		CFA4C2101F9C34D40081AA84 /* autoAdjustHwloc.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = autoAdjustHwloc.hpp; path = "xmr-stak-cpu-ios/xmr-stak-cpu/autoAdjustHwloc.hpp"; sourceTree = "<group>"; };
+		CFA4C2111F9C34D40081AA84 /* console.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = console.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/console.h"; sourceTree = "<group>"; };
+		CFA4C2121F9C34D40081AA84 /* httpd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = httpd.cpp; path = "xmr-stak-cpu-ios/xmr-stak-cpu/httpd.cpp"; sourceTree = "<group>"; };
+		CFA4C2131F9C34D40081AA84 /* msgstruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = msgstruct.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/msgstruct.h"; sourceTree = "<group>"; };
+		CFA4C2141F9C34D40081AA84 /* socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = socket.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/socket.h"; sourceTree = "<group>"; };
+		CFA4C2151F9C34D50081AA84 /* config.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = config.txt; path = "xmr-stak-cpu-ios/xmr-stak-cpu/config.txt"; sourceTree = "<group>"; };
+		CFA4C2161F9C34D50081AA84 /* socks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = socks.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/socks.h"; sourceTree = "<group>"; };
+		CFA4C2171F9C34D50081AA84 /* hwlocMemory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = hwlocMemory.hpp; path = "xmr-stak-cpu-ios/xmr-stak-cpu/hwlocMemory.hpp"; sourceTree = "<group>"; };
+		CFA4C2181F9C34D50081AA84 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = version.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/version.h"; sourceTree = "<group>"; };
+		CFA4C2191F9C34D50081AA84 /* jconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jconf.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/jconf.h"; sourceTree = "<group>"; };
+		CFA4C21A1F9C34D50081AA84 /* socket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = socket.cpp; path = "xmr-stak-cpu-ios/xmr-stak-cpu/socket.cpp"; sourceTree = "<group>"; };
+		CFA4C21B1F9C34D50081AA84 /* jext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jext.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/jext.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CFA4C1C91F9C19310081AA84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4432C3030D35931B760C51BE /* Pods_xmr_stak_cpu_ios.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F228DC5F1369180CE71EC95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB6311B0DB478EA84A21FACD /* Pods_xmr_stak_cpu_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C8681F231321D1A5045A6D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B5B2DA7FA2A0B7D3B3FF85B /* Pods-xmr-stak-cpu-ios.debug.xcconfig */,
+				211FBACC8D1662FC69229749 /* Pods-xmr-stak-cpu-ios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF03E7AD1F9C353F00D3BF3F /* crypto */ = {
+			isa = PBXGroup;
+			children = (
+				CF03E7B61F9C355000D3BF3F /* c_blake256.c */,
+				CF03E7B31F9C354F00D3BF3F /* c_blake256.h */,
+				CF03E7BC1F9C355000D3BF3F /* c_groestl.c */,
+				CF03E7BE1F9C355000D3BF3F /* c_groestl.h */,
+				CF03E7B01F9C354F00D3BF3F /* c_jh.c */,
+				CF03E7AE1F9C354F00D3BF3F /* c_jh.h */,
+				CF03E7B21F9C354F00D3BF3F /* c_keccak.c */,
+				CF03E7BA1F9C355000D3BF3F /* c_keccak.h */,
+				CF03E7BD1F9C355000D3BF3F /* c_skein.c */,
+				CF03E7B81F9C355000D3BF3F /* c_skein.h */,
+				CF03E7B11F9C354F00D3BF3F /* cryptonight_aesni.h */,
+				CF03E7B41F9C355000D3BF3F /* cryptonight_common.cpp */,
+				CF03E7B51F9C355000D3BF3F /* cryptonight.h */,
+				CF03E7B71F9C355000D3BF3F /* groestl_tables.h */,
+				CF03E7BB1F9C355000D3BF3F /* hash.h */,
+				CF03E7AF1F9C354F00D3BF3F /* int-util.h */,
+				CF03E7BF1F9C355000D3BF3F /* skein_port.h */,
+				CF03E7B91F9C355000D3BF3F /* soft_aes.c */,
+			);
+			name = crypto;
+			sourceTree = "<group>";
+		};
+		CFA4C1C31F9C19310081AA84 = {
+			isa = PBXGroup;
+			children = (
+				CF03E7CA1F9C565E00D3BF3F /* config.txt */,
+				CFA4C1E21F9C1D520081AA84 /* xmr-stak-cpu */,
+				CFA4C1CE1F9C19310081AA84 /* xmr-stak-cpu-ios */,
+				CFA4C1CD1F9C19310081AA84 /* Products */,
+				8C8681F231321D1A5045A6D6 /* Pods */,
+				7F228DC5F1369180CE71EC95 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CFA4C1CD1F9C19310081AA84 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFA4C1CC1F9C19310081AA84 /* xmr-stak-cpu-ios.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFA4C1CE1F9C19310081AA84 /* xmr-stak-cpu-ios */ = {
+			isa = PBXGroup;
+			children = (
+				CF03E7C81F9C55E600D3BF3F /* ios-cli-miner.cpp */,
+				CF03E7C71F9C3D2D00D3BF3F /* cpuid.h */,
+				CFA4C1FE1F9C1DF80081AA84 /* PrefixHeader.pch */,
+				CFA4C1E11F9C1C7C0081AA84 /* sse2neon.h */,
+				CFA4C1CF1F9C19310081AA84 /* AppDelegate.swift */,
+				CFA4C1D11F9C19310081AA84 /* ViewController.swift */,
+				CFA4C1D31F9C19310081AA84 /* Main.storyboard */,
+				CFA4C1D61F9C19310081AA84 /* Assets.xcassets */,
+				CFA4C1D81F9C19310081AA84 /* LaunchScreen.storyboard */,
+				CFA4C1DB1F9C19310081AA84 /* Info.plist */,
+				CF03E7CC1F9C56E900D3BF3F /* xmr-stak-cpu-ios-Bridging-Header.h */,
+			);
+			path = "xmr-stak-cpu-ios";
+			sourceTree = "<group>";
+		};
+		CFA4C1E21F9C1D520081AA84 /* xmr-stak-cpu */ = {
+			isa = PBXGroup;
+			children = (
+				CF03E7AD1F9C353F00D3BF3F /* crypto */,
+				CFA4C20E1F9C34D40081AA84 /* autoAdjust.hpp */,
+				CFA4C2101F9C34D40081AA84 /* autoAdjustHwloc.hpp */,
+				CFA4C2001F9C34D30081AA84 /* cli-miner.cpp */,
+				CFA4C2151F9C34D50081AA84 /* config.txt */,
+				CFA4C2071F9C34D40081AA84 /* console.cpp */,
+				CFA4C2111F9C34D40081AA84 /* console.h */,
+				CFA4C2011F9C34D30081AA84 /* donate-level.h */,
+				CFA4C2091F9C34D40081AA84 /* executor.cpp */,
+				CFA4C20A1F9C34D40081AA84 /* executor.h */,
+				CFA4C2121F9C34D40081AA84 /* httpd.cpp */,
+				CFA4C2041F9C34D40081AA84 /* httpd.h */,
+				CFA4C2171F9C34D50081AA84 /* hwlocMemory.hpp */,
+				CFA4C20C1F9C34D40081AA84 /* jconf.cpp */,
+				CFA4C2191F9C34D50081AA84 /* jconf.h */,
+				CFA4C21B1F9C34D50081AA84 /* jext.h */,
+				CFA4C20F1F9C34D40081AA84 /* jpsock.cpp */,
+				CFA4C2081F9C34D40081AA84 /* jpsock.h */,
+				CFA4C2061F9C34D40081AA84 /* LICENSE */,
+				CFA4C2051F9C34D40081AA84 /* minethd.cpp */,
+				CFA4C2021F9C34D30081AA84 /* minethd.h */,
+				CFA4C2131F9C34D40081AA84 /* msgstruct.h */,
+				CFA4C21A1F9C34D50081AA84 /* socket.cpp */,
+				CFA4C2141F9C34D40081AA84 /* socket.h */,
+				CFA4C2161F9C34D50081AA84 /* socks.h */,
+				CFA4C20D1F9C34D40081AA84 /* thdq.hpp */,
+				CFA4C2181F9C34D50081AA84 /* version.h */,
+				CFA4C2031F9C34D30081AA84 /* webdesign.cpp */,
+				CFA4C20B1F9C34D40081AA84 /* webdesign.h */,
+			);
+			name = "xmr-stak-cpu";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CFA4C1CB1F9C19310081AA84 /* xmr-stak-cpu-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFA4C1DE1F9C19310081AA84 /* Build configuration list for PBXNativeTarget "xmr-stak-cpu-ios" */;
+			buildPhases = (
+				33DA3A4318B19D63609221FD /* [CP] Check Pods Manifest.lock */,
+				CFA4C1C81F9C19310081AA84 /* Sources */,
+				CFA4C1C91F9C19310081AA84 /* Frameworks */,
+				CFA4C1CA1F9C19310081AA84 /* Resources */,
+				3EE30501A23740A616894229 /* [CP] Embed Pods Frameworks */,
+				9D4565B5891EF018F3A9A0E0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "xmr-stak-cpu-ios";
+			productName = "xmr-stak-cpu-ios";
+			productReference = CFA4C1CC1F9C19310081AA84 /* xmr-stak-cpu-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFA4C1C41F9C19310081AA84 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Michael G. Kazakov";
+				TargetAttributes = {
+					CFA4C1CB1F9C19310081AA84 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CFA4C1C71F9C19310081AA84 /* Build configuration list for PBXProject "xmr-stak-cpu-ios" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CFA4C1C31F9C19310081AA84;
+			productRefGroup = CFA4C1CD1F9C19310081AA84 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFA4C1CB1F9C19310081AA84 /* xmr-stak-cpu-ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CFA4C1CA1F9C19310081AA84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFA4C1DA1F9C19310081AA84 /* LaunchScreen.storyboard in Resources */,
+				CFA4C1D71F9C19310081AA84 /* Assets.xcassets in Resources */,
+				CFA4C21F1F9C34D50081AA84 /* LICENSE in Resources */,
+				CFA4C1D51F9C19310081AA84 /* Main.storyboard in Resources */,
+				CF03E7CB1F9C565E00D3BF3F /* config.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33DA3A4318B19D63609221FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-xmr-stak-cpu-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3EE30501A23740A616894229 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-xmr-stak-cpu-ios/Pods-xmr-stak-cpu-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D4565B5891EF018F3A9A0E0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-xmr-stak-cpu-ios/Pods-xmr-stak-cpu-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFA4C1C81F9C19310081AA84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFA4C2241F9C34D50081AA84 /* httpd.cpp in Sources */,
+				CF03E7C51F9C355000D3BF3F /* c_groestl.c in Sources */,
+				CF03E7C31F9C355000D3BF3F /* c_blake256.c in Sources */,
+				CFA4C1D21F9C19310081AA84 /* ViewController.swift in Sources */,
+				CFA4C2231F9C34D50081AA84 /* jpsock.cpp in Sources */,
+				CF03E7C11F9C355000D3BF3F /* c_keccak.c in Sources */,
+				CFA4C2201F9C34D50081AA84 /* console.cpp in Sources */,
+				CFA4C21D1F9C34D50081AA84 /* webdesign.cpp in Sources */,
+				CF03E7C91F9C55E700D3BF3F /* ios-cli-miner.cpp in Sources */,
+				CFA4C2211F9C34D50081AA84 /* executor.cpp in Sources */,
+				CF03E7C01F9C355000D3BF3F /* c_jh.c in Sources */,
+				CFA4C1D01F9C19310081AA84 /* AppDelegate.swift in Sources */,
+				CFA4C21E1F9C34D50081AA84 /* minethd.cpp in Sources */,
+				CFA4C2221F9C34D50081AA84 /* jconf.cpp in Sources */,
+				CF03E7C21F9C355000D3BF3F /* cryptonight_common.cpp in Sources */,
+				CFA4C2261F9C34D50081AA84 /* socket.cpp in Sources */,
+				CF03E7C61F9C355000D3BF3F /* c_skein.c in Sources */,
+				CF03E7C41F9C355000D3BF3F /* soft_aes.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CFA4C1D31F9C19310081AA84 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFA4C1D41F9C19310081AA84 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CFA4C1D81F9C19310081AA84 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFA4C1D91F9C19310081AA84 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CFA4C1DC1F9C19310081AA84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INPUT_FILETYPE = automatic;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "xmr-stak-cpu-ios/PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "xmr-stak-cpu-ios/cpuid-arm";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-fno-implicit-module-maps";
+				"OTHER_CFLAGS[sdk=iphonesimulator*]" = (
+					"-march=native",
+					"-fno-implicit-module-maps",
+				);
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "xmr-stak-cpu-ios/xmr-stak-cpu-ios-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = arm64;
+			};
+			name = Debug;
+		};
+		CFA4C1DD1F9C19310081AA84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_INPUT_FILETYPE = automatic;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "xmr-stak-cpu-ios/PrefixHeader.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "xmr-stak-cpu-ios/cpuid-arm";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "-fno-implicit-module-maps";
+				"OTHER_CFLAGS[sdk=iphonesimulator*]" = (
+					"-march=native",
+					"-fno-implicit-module-maps",
+				);
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "xmr-stak-cpu-ios/xmr-stak-cpu-ios-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = arm64;
+			};
+			name = Release;
+		};
+		CFA4C1DF1F9C19310081AA84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B5B2DA7FA2A0B7D3B3FF85B /* Pods-xmr-stak-cpu-ios.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AC5SJT236H;
+				INFOPLIST_FILE = "xmr-stak-cpu-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "life.kazakov.xmr-stak-cpu-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CFA4C1E01F9C19310081AA84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 211FBACC8D1662FC69229749 /* Pods-xmr-stak-cpu-ios.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AC5SJT236H;
+				INFOPLIST_FILE = "xmr-stak-cpu-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "life.kazakov.xmr-stak-cpu-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFA4C1C71F9C19310081AA84 /* Build configuration list for PBXProject "xmr-stak-cpu-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFA4C1DC1F9C19310081AA84 /* Debug */,
+				CFA4C1DD1F9C19310081AA84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFA4C1DE1F9C19310081AA84 /* Build configuration list for PBXNativeTarget "xmr-stak-cpu-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFA4C1DF1F9C19310081AA84 /* Debug */,
+				CFA4C1E01F9C19310081AA84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CFA4C1C41F9C19310081AA84 /* Project object */;
+}
