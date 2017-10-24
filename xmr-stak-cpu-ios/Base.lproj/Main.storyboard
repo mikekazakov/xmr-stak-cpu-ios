@@ -17,22 +17,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smE-9Z-vsx">
-                                <rect key="frame" x="96" y="243" width="129" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smE-9Z-vsx">
+                                <rect key="frame" x="56" y="938" width="130" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="HEJ-6T-AKS"/>
+                                </constraints>
+                                <state key="normal" title="Hash Rate"/>
                                 <connections>
                                     <action selector="onShowHashrate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HpI-oJ-slN"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tKT-xP-7UZ">
+                                <rect key="frame" x="56" y="82" width="622" height="848"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="smE-9Z-vsx" firstAttribute="top" secondItem="tKT-xP-7UZ" secondAttribute="bottom" constant="8" symbolic="YES" id="NPx-6D-NsK"/>
+                            <constraint firstItem="tKT-xP-7UZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="O5p-N9-nHT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tKT-xP-7UZ" secondAttribute="trailing" constant="90" id="Pva-cK-qPZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="smE-9Z-vsx" secondAttribute="bottom" constant="56" id="e2e-ZT-0wL"/>
+                            <constraint firstItem="smE-9Z-vsx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="tQH-l7-D70"/>
+                            <constraint firstItem="tKT-xP-7UZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62" id="z3e-C3-yVN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="tKT-xP-7UZ" id="uIr-aP-U5W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="125.4872563718141"/>
+            <point key="canvasLocation" x="139.84375" y="125.39062499999999"/>
         </scene>
     </scenes>
 </document>
