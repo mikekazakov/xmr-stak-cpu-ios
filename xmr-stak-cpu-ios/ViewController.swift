@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let textFont = UIFont(name: "Menlo-Regular", size: 15)!
+    let textFont = UIFont(name: "Menlo-Regular", size: 13)!
     
     let pipe = Pipe()
     var fileHandle: FileHandle?
@@ -74,7 +74,15 @@ class ViewController: UIViewController {
     @IBAction func onShowHashrate(_ sender: Any) {
         invoke_print_hash()
     }
-    @IBOutlet var textView: UITextView!
     
+    @IBAction func onShowResults(_ sender: Any) {
+        invoke_print_results()
+    }
+    
+    @IBAction func onShowConnection(_ sender: Any) {
+        invoke_print_connection()
+    }
+
+    @IBOutlet var textView: UITextView!
 }
 

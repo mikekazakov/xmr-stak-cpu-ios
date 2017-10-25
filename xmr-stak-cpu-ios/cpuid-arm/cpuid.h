@@ -22,7 +22,7 @@
 static inline __attribute__((always_inline))
 void __cpuid_count(uint32_t eax, int32_t ecx, int32_t &v1, int32_t &v2, int32_t &v3, int32_t &v4)
 {
-    // can do just everything
+    // arm can do just everything!
     v1 = v2 = v3 = v4 = -1;
 }
 

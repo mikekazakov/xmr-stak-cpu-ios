@@ -144,7 +144,8 @@ int miner_main(int argc, char *argv[])
 	printer::inst()->print_str("-------------------------------------------------------------------\n");
 	printer::inst()->print_str( XMR_STAK_NAME" " XMR_STAK_VERSION " mining software, CPU Version.\n");
 	printer::inst()->print_str("Based on CPU mining code by wolf9466 (heavily optimized by fireice_uk).\n");
-	printer::inst()->print_str("Brought to you by fireice_uk and psychocrypt under GPLv3.\n\n");
+	printer::inst()->print_str("Brought to you by fireice_uk and psychocrypt under GPLv3.\n");
+	printer::inst()->print_str("iOS port was made by Michael Kazakov\n\n");
 	char buffer[64];
 	snprintf(buffer, sizeof(buffer), "Configurable dev donation level is set to %.1f %%\n\n", fDevDonationLevel * 100.0);
 	printer::inst()->print_str(buffer);
@@ -236,4 +237,14 @@ extern "C" void run_main_miner(const char *_config)
 extern "C" void invoke_print_hash()
 {
     executor::inst()->push_event(ex_event(EV_USR_HASHRATE));
+}
+
+extern "C" void invoke_print_results()
+{
+    executor::inst()->push_event(ex_event(EV_USR_RESULTS));
+}
+
+extern "C" void invoke_print_connection()
+{
+    executor::inst()->push_event(ex_event(EV_USR_CONNSTAT));
 }

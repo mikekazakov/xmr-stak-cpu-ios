@@ -11,6 +11,7 @@
 
 void run_main_miner(const char *_config);
 void invoke_print_hash();
-void hack_stdout();
+void invoke_print_results();
+void invoke_print_connection();
 
 #endif /* xmr_stak_cpu_ios_Bridging_Header_h */
