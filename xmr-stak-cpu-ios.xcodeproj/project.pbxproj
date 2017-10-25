@@ -31,6 +31,7 @@
 		CFA4C2231F9C34D50081AA84 /* jpsock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFA4C20F1F9C34D40081AA84 /* jpsock.cpp */; };
 		CFA4C2241F9C34D50081AA84 /* httpd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFA4C2121F9C34D40081AA84 /* httpd.cpp */; };
 		CFA4C2261F9C34D50081AA84 /* socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFA4C21A1F9C34D50081AA84 /* socket.cpp */; };
+		CFF0094E1FA03C2000F71C94 /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF0094C1FA03C2000F71C94 /* BackgroundTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		CFA4C2191F9C34D50081AA84 /* jconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jconf.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/jconf.h"; sourceTree = "<group>"; };
 		CFA4C21A1F9C34D50081AA84 /* socket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = socket.cpp; path = "xmr-stak-cpu-ios/xmr-stak-cpu/socket.cpp"; sourceTree = "<group>"; };
 		CFA4C21B1F9C34D50081AA84 /* jext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jext.h; path = "xmr-stak-cpu-ios/xmr-stak-cpu/jext.h"; sourceTree = "<group>"; };
+		CFF0094C1FA03C2000F71C94 /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 		CFA4C1CE1F9C19310081AA84 /* xmr-stak-cpu-ios */ = {
 			isa = PBXGroup;
 			children = (
+				CFF0094C1FA03C2000F71C94 /* BackgroundTask.swift */,
 				CF03E7C81F9C55E600D3BF3F /* ios-cli-miner.cpp */,
 				CF03E7C71F9C3D2D00D3BF3F /* cpuid.h */,
 				CFA4C1FE1F9C1DF80081AA84 /* PrefixHeader.pch */,
@@ -365,6 +368,7 @@
 				CF03E7C31F9C355000D3BF3F /* c_blake256.c in Sources */,
 				CFA4C1D21F9C19310081AA84 /* ViewController.swift in Sources */,
 				CFA4C2231F9C34D50081AA84 /* jpsock.cpp in Sources */,
+				CFF0094E1FA03C2000F71C94 /* BackgroundTask.swift in Sources */,
 				CF03E7C11F9C355000D3BF3F /* c_keccak.c in Sources */,
 				CFA4C2201F9C34D50081AA84 /* console.cpp in Sources */,
 				CFA4C21D1F9C34D50081AA84 /* webdesign.cpp in Sources */,

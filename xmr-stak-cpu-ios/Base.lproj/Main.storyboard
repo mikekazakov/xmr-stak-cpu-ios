@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Menlo.ttc">
+            <string>Menlo-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -27,21 +32,21 @@
                                     <action selector="onShowHashrate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HpI-oJ-slN"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tKT-xP-7UZ">
-                                <rect key="frame" x="56" y="82" width="622" height="848"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tKT-xP-7UZ">
+                                <rect key="frame" x="0.0" y="20" width="768" height="910"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="smE-9Z-vsx" firstAttribute="top" secondItem="tKT-xP-7UZ" secondAttribute="bottom" constant="8" symbolic="YES" id="NPx-6D-NsK"/>
-                            <constraint firstItem="tKT-xP-7UZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="O5p-N9-nHT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tKT-xP-7UZ" secondAttribute="trailing" constant="90" id="Pva-cK-qPZ"/>
+                            <constraint firstItem="tKT-xP-7UZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O5p-N9-nHT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tKT-xP-7UZ" secondAttribute="trailing" id="Pva-cK-qPZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="smE-9Z-vsx" secondAttribute="bottom" constant="56" id="e2e-ZT-0wL"/>
                             <constraint firstItem="smE-9Z-vsx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="tQH-l7-D70"/>
-                            <constraint firstItem="tKT-xP-7UZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62" id="z3e-C3-yVN"/>
+                            <constraint firstItem="tKT-xP-7UZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="z3e-C3-yVN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
