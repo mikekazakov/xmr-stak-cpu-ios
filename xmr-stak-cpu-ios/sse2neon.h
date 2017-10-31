@@ -46,7 +46,7 @@ static inline __attribute__((always_inline)) int64_t _mm_cvtsi128_si64( __m128i 
 // Emits the Advanced Encryption Standard (AES) instruction aesenc. This instruction performs one round of AES encryption.
 // https://msdn.microsoft.com/en-us/library/cc664810(v=vs.120).aspx
 // Since Intel and ARM have different notation of "AES round", this issues additional instructions to maintain the same semantics.
-static inline __attribute__((always_inline)) __m128i _mm_aesenc_si128 ( __m128i v, __m128i rkey )
+static inline __attribute__((always_inline)) __m128i _mm_aesenc_si128( __m128i v, __m128i rkey )
 {
     const __attribute__((aligned(16))) __m128i zero = {0};
     return veorq_u8(vaesmcq_u8(vaeseq_u8(v, zero)), rkey);

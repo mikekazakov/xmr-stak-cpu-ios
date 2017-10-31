@@ -12,8 +12,8 @@ class ViewController: UIViewController {
     let textFont = UIFont(name: "Menlo-Regular", size: 13)!
     
     let pipe = Pipe()
-    var fileHandle: FileHandle?
-    var source: DispatchSourceRead?
+    var fileHandle: FileHandle!
+    var source: DispatchSourceRead!
 
     var backgroundTask = BackgroundTask()
 
@@ -28,41 +28,32 @@ class ViewController: UIViewController {
         run_main_miner( config_path )
     }
 
-    func setupStdout () {
-        fileHandle = pipe.fileHandleForReading;
-        fflush(stdout);
-        if dup2(pipe.fileHandleForWriting.fileDescriptor, fileno(stdout)) == -1 {
-            abort();
-        }
-        setvbuf(stdout, nil, _IONBF, 0);
-        
-        source = DispatchSource.makeReadSource(fileDescriptor: fileHandle!.fileDescriptor,
-                                               queue: DispatchQueue.global());
-        source?.setEventHandler(handler: {
-            self.readStdout();
-        });
-        source?.resume();
+    func setupStdout() {
+        fileHandle = pipe.fileHandleForReading
+        fflush(stdout)
+        dup2(pipe.fileHandleForWriting.fileDescriptor, fileno(stdout))
+        setvbuf(stdout, nil, _IONBF, 0)
+        source = DispatchSource.makeReadSource(fileDescriptor: fileHandle.fileDescriptor,
+                                               queue: DispatchQueue.global())
+        source.setEventHandler {
+            self.readStdout()
+        };
+        source.resume()
     }
 
     func readStdout() {
-        let data = malloc(4096);
-        var read_ret: Int = 0
-        
-        repeat {
-            errno = 0;
-            read_ret = read(self.fileHandle!.fileDescriptor, data, 4096)
-        } while( read_ret == -1 && errno == EINTR )
-        
+        let buffer = malloc(4096)!
+        let read_ret = read(fileHandle.fileDescriptor, buffer, 4096)
         if read_ret > 0 {
-            let d = UnsafeBufferPointer(start: data?.assumingMemoryBound(to: UInt8.self),
-                                        count: read_ret)
-            if let s = String(bytes: d, encoding: String.Encoding.utf8) {
+            let data = UnsafeBufferPointer(start: buffer.assumingMemoryBound(to: UInt8.self),
+                                           count: read_ret)
+            if let str = String(bytes: data, encoding: String.Encoding.utf8) {
                 DispatchQueue.main.async {
-                    self.acceptLog(str: s);
-                };
+                    self.acceptLog(str: str)
+                }
             }
         }
-        free(data);
+        free(buffer)
     }
 
     func acceptLog(str: String) {
