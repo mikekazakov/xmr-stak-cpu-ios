@@ -15,4 +15,6 @@ pod install
 ```
 2) Open xmr-stak-cpu-ios.xcworkspace and set the proper signing certificate.
 3) Adjust config.txt settings according to your pool and wallet information.
-4) Build the app and run it on the device.
+4) Build the app and run it on the device.  
+**Ensure you're using the Release configuration, not the Debug!**  
+To check it, open in Xcode: Product->Scheme->Edit Scheme...->Run->Info->Build Configuration.
