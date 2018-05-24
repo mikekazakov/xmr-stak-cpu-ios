@@ -24,8 +24,10 @@ class ViewController: UIViewController {
       
         backgroundTask.startBackgroundTask()
         
-        let config_path = Bundle.main.path(forResource: "config", ofType: "txt");
-        run_main_miner( config_path )
+        let config_path = Bundle.main.path(forResource: "config", ofType: "txt")
+        let pools_path = Bundle.main.path(forResource: "pools", ofType: "txt")
+        let cpu_path = Bundle.main.path(forResource: "cpu", ofType: "txt")
+        run_main_miner( config_path, pools_path, cpu_path )
     }
 
     func setupStdout() {

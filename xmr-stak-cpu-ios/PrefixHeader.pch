@@ -16,5 +16,7 @@
 
 #define CONF_NO_HWLOC 1
 #define CONF_NO_HTTPD 1
+#define CONF_NO_OPENCL 1
+#define CONF_NO_CUDA 1
 
 #endif /* PrefixHeader_pch */

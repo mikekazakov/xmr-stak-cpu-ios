@@ -9,7 +9,7 @@
 #ifndef xmr_stak_cpu_ios_Bridging_Header_h
 #define xmr_stak_cpu_ios_Bridging_Header_h
 
-void run_main_miner(const char *_config);
+void run_main_miner(const char *_config, const char *_pools, const char *_cpu);
 void invoke_print_hash();
 void invoke_print_results();
 void invoke_print_connection();

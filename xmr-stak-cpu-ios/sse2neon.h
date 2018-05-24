@@ -82,4 +82,18 @@ static inline __attribute__((always_inline)) __m128i _mm_aeskeygenassist_si128(_
     return _mm_set_epi32(((X3 >> 8) | (X3 << 24)) ^ rcon, X3, ((X1 >> 8) | (X1 << 24)) ^ rcon, X1);
 }
 
+// Move the upper 2 single-precision (32-bit) floating-point elements from b to the lower 2 elements of dst, and copy the upper 2 elements from a to the upper 2 elements of dst.
+// https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_movehl_ps&expand=3600
+static inline __attribute__((always_inline)) __m128 _mm_movehl_ps(__m128 a, __m128 b)
+{
+    return vreinterpretq_m128_f32(vcombine_f32(vget_high_f32(vreinterpretq_f32_m128(b)), vget_high_f32(vreinterpretq_f32_m128(a))));    
+}
+
+// Add packed 64-bit integers in a and b, and store the results in dst.
+// https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_add_epi64&expand=3600,97
+static inline __attribute__((always_inline)) __m128i _mm_add_epi64(__m128i a, __m128i b)
+{
+    return vreinterpretq_s32_s64(vaddq_s64( vreinterpretq_s64_s32(a), vreinterpretq_s64_s32(b)));
+}
+
 #endif

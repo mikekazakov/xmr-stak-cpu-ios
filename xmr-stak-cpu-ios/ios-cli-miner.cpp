@@ -21,49 +21,26 @@
   *
   */
 
-#include "executor.h"
-#include "minethd.h"
-#include "jconf.h"
-#include "console.h"
-#include "donate-level.h"
-#ifndef CONF_NO_HWLOC
-#   include "autoAdjustHwloc.hpp"
-#else
-#   include "autoAdjust.hpp"
-#endif
-#include "version.h"
-
-#ifndef CONF_NO_HTTPD
-#	include "httpd.h"
-#endif
-
+#include <xmrstak/misc/executor.hpp>
+#include <xmrstak/backend/miner_work.hpp>
+#include <xmrstak/backend/globalStates.hpp>
+#include <xmrstak/backend/backendConnector.hpp>
+#include <xmrstak/jconf.hpp>
+#include <xmrstak/misc/console.hpp>
+#include <xmrstak/donate-level.hpp>
+#include <xmrstak/params.hpp>
+#include <xmrstak/misc/configEditor.hpp>
+#include <xmrstak/version.hpp>
+#include <xmrstak/misc/utility.hpp>
+#include <xmrstak/backend/cpu/minethd.hpp>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-
 #include <time.h>
-
 #ifndef CONF_NO_TLS
 #include <openssl/ssl.h>
 #include <openssl/err.h>
 #endif
-
-//Do a press any key for the windows folk. *insert any key joke here*
-#ifdef _WIN32
-void win_exit()
-{
-	printer::inst()->print_str("Press any key to exit.");
-	get_key();
-	return;
-}
-
-#define strcasecmp _stricmp
-
-#else
-void win_exit() { return; }
-#endif // _WIN32
-
-void do_benchmark();
 
 int miner_main(int argc, char *argv[])
 {
@@ -78,82 +55,43 @@ int miner_main(int argc, char *argv[])
 
 	srand(time(0));
 
-	const char* sFilename = "config.txt";
-	bool benchmark_mode = false;
+	const char* sFilename = argv[1];
+    const char* sPools = argv[2];
 
-	if(argc >= 2)
-	{
-		if(strcmp(argv[1], "-h") == 0)
-		{
-			printer::inst()->print_msg(L0, "Usage %s [CONFIG FILE]", argv[0]);
-			win_exit();
-			return 0;
-		}
-
-		if(argc >= 3 && strcasecmp(argv[1], "-c") == 0)
-		{
-			sFilename = argv[2];
-		}
-		else if(argc >= 3 && strcasecmp(argv[1], "benchmark_mode") == 0)
-		{
-			sFilename = argv[2];
-			benchmark_mode = true;
-		}
-		else
-			sFilename = argv[1];
-	}
-
-	if(!jconf::inst()->parse_config(sFilename))
+    xmrstak::params::inst().configFileCPU = argv[3];
+	if(!jconf::inst()->parse_config(sFilename, sPools))
 	{
 		win_exit();
 		return 0;
 	}
 
-	if(jconf::inst()->NeedsAutoconf())
-	{
-		autoAdjust adjust;
-		adjust.printConfig();
-		win_exit();
-		return 0;
-	}
-
-	if (!minethd::self_test())
+    if (!xmrstak::cpu::minethd::self_test())
 	{
 		win_exit();
 		return 0;
 	}
 
-	if(benchmark_mode)
-	{
-		do_benchmark();
-		win_exit();
-		return 0;
-	}
-
-#ifndef CONF_NO_HTTPD
-	if(jconf::inst()->GetHttpdPort() != 0)
-	{
-		if (!httpd::inst()->start_daemon())
-		{
-			win_exit();
-			return 0;
-		}
-	}
+    printer::inst()->print_str("-------------------------------------------------------------------\n");
+    printer::inst()->print_str(get_version_str_short().c_str());
+    printer::inst()->print_str("\n\n");
+    printer::inst()->print_str("Brought to you by fireice_uk and psychocrypt under GPLv3.\n");
+    printer::inst()->print_str("Based on CPU mining code by wolf9466 (heavily optimized by fireice_uk).\n");
+#ifndef CONF_NO_CUDA
+    printer::inst()->print_str("Based on NVIDIA mining code by KlausT and psychocrypt.\n");
 #endif
-
-	printer::inst()->print_str("-------------------------------------------------------------------\n");
-	printer::inst()->print_str( XMR_STAK_NAME" " XMR_STAK_VERSION " mining software, CPU Version.\n");
-	printer::inst()->print_str("Based on CPU mining code by wolf9466 (heavily optimized by fireice_uk).\n");
-	printer::inst()->print_str("Brought to you by fireice_uk and psychocrypt under GPLv3.\n");
-	printer::inst()->print_str("iOS port was made by Michael Kazakov.\n\n");
-	char buffer[64];
-	snprintf(buffer, sizeof(buffer), "Configurable dev donation level is set to %.1f %%\n\n", fDevDonationLevel * 100.0);
-	printer::inst()->print_str(buffer);
-	printer::inst()->print_str("You can use following keys to display reports:\n");
-	printer::inst()->print_str("'h' - hashrate\n");
-	printer::inst()->print_str("'r' - results\n");
-	printer::inst()->print_str("'c' - connection\n");
-	printer::inst()->print_str("-------------------------------------------------------------------\n");
+#ifndef CONF_NO_OPENCL
+    printer::inst()->print_str("Based on OpenCL mining code by wolf9466.\n");
+#endif
+    printer::inst()->print_str("iOS port was made by Michael Kazakov.\n\n");    
+    char buffer[64];
+    snprintf(buffer, sizeof(buffer), "\nConfigurable dev donation level is set to %.1f%%\n\n", fDevDonationLevel * 100.0);
+    printer::inst()->print_str(buffer);
+    printer::inst()->print_str("You can use following keys to display reports:\n");
+    printer::inst()->print_str("'h' - hashrate\n");
+    printer::inst()->print_str("'r' - results\n");
+    printer::inst()->print_str("'c' - connection\n");
+    printer::inst()->print_str("-------------------------------------------------------------------\n");
+    printer::inst()->print_msg(L0, "Mining coin: %s", jconf::inst()->GetMiningCoin().c_str());
 
 	if(strlen(jconf::inst()->GetOutputFile()) != 0)
 		printer::inst()->open_logfile(jconf::inst()->GetOutputFile());
@@ -194,42 +132,13 @@ int miner_main(int argc, char *argv[])
 	return 0;
 }
 
-void do_benchmark()
-{
-	using namespace std::chrono;
-	std::vector<minethd*>* pvThreads;
-
-	printer::inst()->print_msg(L0, "Running a 60 second benchmark...");
-
-	uint8_t work[76] = {0};
-	minethd::miner_work oWork = minethd::miner_work("", work, sizeof(work), 0, 0, false, 0);
-	pvThreads = minethd::thread_starter(oWork);
-
-	uint64_t iStartStamp = time_point_cast<milliseconds>(high_resolution_clock::now()).time_since_epoch().count();
-
-	std::this_thread::sleep_for(std::chrono::seconds(60));
-
-	oWork = minethd::miner_work();
-	minethd::switch_work(oWork);
-
-	double fTotalHps = 0.0;
-	for (uint32_t i = 0; i < pvThreads->size(); i++)
-	{
-		double fHps = pvThreads->at(i)->iHashCount;
-		fHps /= (pvThreads->at(i)->iTimestamp - iStartStamp) / 1000.0;
-
-		printer::inst()->print_msg(L0, "Thread %u: %.1f H/S", i, fHps);
-		fTotalHps += fHps;
-	}
-
-	printer::inst()->print_msg(L0, "Total: %.1f H/S", fTotalHps);
-}
-
-extern "C" void run_main_miner(const char *_config)
+extern "C" void run_main_miner(const char *_config, const char *_pools, const char *_cpu)
 {
     std::string conf = _config;
-    std::thread([conf]{
-        const char *argv[] = {"miner", conf.c_str()};
+    std::string pools = _pools;
+    std::string cpu = _cpu;
+    std::thread([conf, pools, cpu]{
+        const char *argv[] = {"miner", conf.c_str(), pools.c_str(), cpu.c_str()};
         miner_main(2, (char **)argv);
     }).detach();
 }

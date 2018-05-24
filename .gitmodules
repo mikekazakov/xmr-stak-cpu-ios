@@ -1,6 +1,6 @@
-[submodule "xmr-stak-cpu-ios/xmr-stak-cpu"]
-	path = xmr-stak-cpu-ios/xmr-stak-cpu
-	url = https://github.com/fireice-uk/xmr-stak-cpu
 [submodule "xmr-stak-cpu-ios/sse2neon"]
 	path = xmr-stak-cpu-ios/sse2neon
 	url = https://github.com/jratcliff63367/sse2neon
+[submodule "xmr-stak-cpu-ios/xmr-stak"]
+	path = xmr-stak-cpu-ios/xmr-stak
+	url = https://github.com/fireice-uk/xmr-stak
